@@ -5,7 +5,7 @@ import java.util.logging.*;
 
 public class rcoemLogger{
 		public static void main(String args[]){
-				//Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME); 
+				//Logger LOGGER = Logger.getLogger(Logger.GLOBAL_LOGGER_NAME);
 				Logger LOGGER = Logger.getLogger(rcoemLogger.class.getName());
 				//LOGGER.setLevel(Level.FINEST); 
 				//LOGGER.log(Level.FINE, "My first Log Message"); 
@@ -25,11 +25,11 @@ public class rcoemLogger{
 								= new FileHandler("logs.txt"); 
 						ConsoleHandler handler 
 								= new ConsoleHandler(); 
-						//handler.setFormatter(new SimpleFormatter()); 
-						LOGGER.addHandler(handler); 
+						fHandler.setFormatter(new SimpleFormatter()); 
+						//LOGGER.addHandler(handler); 
 						LOGGER.addHandler(fHandler); 
 						LOGGER.setLevel(Level.WARNING);
-						LOGGER.warning("qwerty message"); 
+						LOGGER.warning("new warning message"); 
 				}
 				catch (IOException e){
 						e.printStackTrace();
